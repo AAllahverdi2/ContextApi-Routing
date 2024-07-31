@@ -34,12 +34,12 @@ const App = () => {
   }
 
   function deleteFromWishList(product) {
-    const target=wishList.find((item)=>item.id==product.id)
-    wishList.splice(wishList.indexOf(target),1)
+    const target = wishList.find((item) => item.id == product.id)
+    wishList.splice(wishList.indexOf(target), 1)
     setWishList([...wishList])
-    localStorage.setItem("wish",JSON.stringify([...wishList]))
+    localStorage.setItem("wish", JSON.stringify([...wishList]))
     toast.success("deleted from wishlist")
-    
+
   }
 
   const value = {

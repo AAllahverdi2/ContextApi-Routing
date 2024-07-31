@@ -2,18 +2,20 @@ import React, { useContext } from 'react'
 import "./Card.css"
 import Maincontext from '../Context/Context'
 import { Toaster } from 'react-hot-toast'
+import { Link } from 'react-router-dom'
 const Card = ({ item }) => {
-    const {addToWishList}=useContext(Maincontext)
+    const { addToWishList } = useContext(Maincontext)
     return (
         <div className='col-lg-3 col-md-6 mr-3 mb-4'>
             <div className="card" style={{ width: "18rem;" }}>
                 <div className='img__div'>
-                    <img className="card-img-top " src={item.image} alt="Card image cap" />
+                    <Link  to={`/${item.id}`}> <img className="card-img-top " src={item.image} alt="Card image cap" />  </Link>
+                  
                     <div className='icondiv'>
-                        <button onClick={()=>{
+                        <button onClick={() => {
                             addToWishList(item)
                         }}>
-                        <i className="fa-regular fa-heart"></i>
+                            <i className="fa-regular fa-heart"></i>
 
                         </button>
                     </div>
@@ -23,7 +25,7 @@ const Card = ({ item }) => {
                     <p>{item.price} $</p>
                 </div>
             </div>
-            <Toaster/>
+            <Toaster />
         </div>
     )
 }

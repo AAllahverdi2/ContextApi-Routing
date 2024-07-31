@@ -1,5 +1,5 @@
 import React from 'react'
-import Cards from '../companents/Cards'
+import Cards from '../../companents/Cards'
 
 const Product = () => {
   return (

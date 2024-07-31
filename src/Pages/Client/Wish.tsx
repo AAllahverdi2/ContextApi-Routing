@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import Maincontext from '../Context/Context'
+import Maincontext from '../../Context/Context'
 import { Toaster } from 'react-hot-toast'
 
 const Wish = () => {

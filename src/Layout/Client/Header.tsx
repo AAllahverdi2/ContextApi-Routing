@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './Header.css'
-import Maincontext from '../Context/Context'
+import Maincontext from '../../Context/Context'
 
 const Header = () => {
   const location = useLocation();
@@ -9,6 +9,9 @@ const Header = () => {
 
   return (
     <div className="header">
+      <div style={{marginRight:"400px", color:"white", fontSize:"22px"}}>
+        ClientSide
+      </div>
       <Link className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} to="/">Home</Link>
       <Link className={`nav-link ${location.pathname === '/Product' ? 'active' : ''}`} to="/Product">Product</Link>
       <Link className={`nav-link ${location.pathname === '/Wish' ? 'active' : ''}`} to="/Wish">
