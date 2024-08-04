@@ -28,7 +28,7 @@ const ROUTES=[
                 element:<Product/>
             },
             {
-                path:"Product/:id",
+                path:"item/:id",
                 element:<Detail/>
             },
         ]
